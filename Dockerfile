@@ -25,7 +25,7 @@ RUN cmake \
 FROM alpine
 
 RUN apk add --no-cache --virtual triton-runtime-dependencies \
-    lbstdc++ \
+    libstdc++ \
     libgomp
 
 COPY --from=build /opt/triton/ /opt/triton/
